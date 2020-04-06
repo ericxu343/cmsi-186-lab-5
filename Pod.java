@@ -34,6 +34,5 @@ public class Pod {
           totalDistance += v(t) * interLength; // adds the slice distance to total distance
         }
         return totalDistance;
-        // return 0.0;
     }
 }

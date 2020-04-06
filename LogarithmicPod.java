@@ -1,5 +1,5 @@
 public class LogarithmicPod extends Pod {
-    public LogarithmicPod(String name, double aValue, double constant) {
-        super(name, t -> aValue * Math.log(t + constant));
+    public LogarithmicPod(String name, double aValue, double bValue) {
+        super(name, t -> aValue * Math.log(bValue * (t + 1)));
     }
 }
