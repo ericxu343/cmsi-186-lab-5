@@ -8,7 +8,6 @@ public class PodRace {
         // first I will create pods (looks like 3)
         // Then I will calculate the distance of each pod
         // Determine a winner
-        double precision;
         boolean noWinner = true;
         double distanceTraveled;
         double currentTime = timeSlice;
@@ -16,7 +15,7 @@ public class PodRace {
         if (timeLimit > slices * timeSlice) {
           slices += 1;
         }
-        if (distance <= 0) { // is there a variable for precision
+        if (distance <= 0) {
           throw new IllegalArgumentException("Distance and precision must be greater than 0");
         }
 
