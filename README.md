@@ -8,4 +8,4 @@ In your new repository, don’t forget to completely edit this README file, as _
 
 
 
-I created many racing pods in a simulation which operate at different speeds. I will assign each arguments that will make them run differently in the code. Some of them will accelerate very fast and then slow down, some while start slow and accelerate, and some may go really fast but suddenly stop working.
+I filled in the distanceTraveled method in the Pod class to determine how far each pod will travel. Icreated many racing pods in a simulation which operate at different velocity given their equation. They all have a start time of 0 and they will continue to go until they reach distance of the race's end. I kept track of how each pod traveled per slice of time to determine how far they went. Once they reached the end of the race, I added them to winners. 
