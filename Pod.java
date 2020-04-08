@@ -24,14 +24,14 @@ public class Pod {
         // passed at least one slice, throw an IllegalArgumentException with the
         // message "At least one slice required".
         if (slices < 1) {
-          throw new IllegalArgumentException("At least one slice required");
+            throw new IllegalArgumentException("At least one slice required");
         }
 
         double interLength = (endTime - startTime) / slices;
         double totalDistance = 0;
         for (int i = 0; i < slices; i++) {
-          double t = startTime + (i * interLength); // changes the starting time
-          totalDistance += v(t) * interLength; // adds the slice distance to total distance
+            double t = startTime + (i * interLength); // changes the starting time
+            totalDistance += v(t) * interLength; // adds the slice distance to total distance
         }
         return totalDistance;
     }
