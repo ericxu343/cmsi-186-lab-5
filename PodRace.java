@@ -16,27 +16,27 @@ public class PodRace {
 
 
         if (distance <= 0) {
-          throw new IllegalArgumentException("Distance and precision must be greater than 0");
+            throw new IllegalArgumentException("Distance and precision must be greater than 0");
         }
 
         var winners = new HashSet<Pod>();
         while (noWinner && startTime < timeLimit) {
-          if (endTime > timeLimit) {
-            endTime = timeLimit;
-          }
-          int j = 0;
-          for (Pod racer : racers) {
-            double d = racer.distanceTraveled(startTime, endTime, 1);
-            racerDistance[j]+= d;
-            if (racerDistance[j] >= distance) {
-              noWinner = false;
-              winners.add(racer);
+            if (endTime > timeLimit) {
+                endTime = timeLimit;
             }
-            j += 1;
+            int j = 0;
+            for (Pod racer : racers) {
+                double d = racer.distanceTraveled(startTime, endTime, 1);
+                racerDistance[j]+= d;
+                if (racerDistance[j] >= distance) {
+                    noWinner = false;
+                    winners.add(racer);
+                }
+                j += 1;
+            }
+            startTime += timeSlice;
+            endTime += timeSlice;
           }
-          startTime += timeSlice;
-          endTime += timeSlice;
-        }
-        return winners;
+          return winners;
     }
 }
