@@ -4,10 +4,7 @@ import java.util.HashMap;
 
 public class PodRace {
     public static Set<Pod> race(double distance, Set<Pod> racers, double timeSlice, double timeLimit) {
-        // IMPLEMENT THIS METHOD
-        // first I will create pods (looks like 3)
-        // Then I will calculate the distance of each pod
-        // Determine a winner
+
         boolean noWinner = true;
         double distanceTraveled;
         double startTime = 0;
